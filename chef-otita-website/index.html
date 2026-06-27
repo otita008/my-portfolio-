@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Chef Otita | Private Chef & Catering Services in Nairobi</title>
+    <meta name="description" content="Professional private chef and bespoke culinary catering services by Chef Samuel Otita. Tailored intimate dining, private gatherings, and custom menus across Nairobi.">
+    <meta name="keywords" content="Private Chef Nairobi, Catering Services Kenya, Chef Samuel Otita, Bespoke Fine Dining Nairobi, Professional Chef Kenya, Airbnb Chef Nairobi">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chef Otita | Private Chef & Catering Services">
+    <meta property="og:description" content="Elevate your next event with tailored menus and professional culinary experiences by Chef Samuel Otita in Nairobi.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80">
+
+    <style>
+        /* --- DESIGN SYSTEM & CSS VARIABLES --- */
+        :root {
+            --primary: #d4af37; /* Culinary Gold */
+            --primary-dark: #aa8c2c;
+            --dark-bg: #121212; /* Rich Charcoal */
+            --surface: #1e1e1e; /* Card Background */
+            --light-text: #f5f5f5;
+            --muted-text: #b3b3b3;
+            --border: #333333;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --whatsapp-green: #25d366;
+            --instagram-pink: #e1306c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        /* --- GLOBAL COMPONENTS --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #000;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1rem;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            color: #fff;
+        }
+
+        .btn-instagram {
+            background-color: var(--instagram-pink);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1rem;
+            margin-left: 10px;
+        }
+
+        .btn-instagram:hover {
+            background-color: #c13584;
+            color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--muted-text);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-tagline {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-desc {
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            color: var(--muted-text);
+            font-size: 1.1rem;
+        }
+
+        /* --- WHY CHOOSE ME --- */
+        .why-choose {
+            background-color: var(--surface);
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .why-item {
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .why-item span {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* --- ABOUT --- */
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--muted-text);
+            font-size: 1.05rem;
+        }
+
+        .about-motto {
+            font-style: italic;
+            border-left: 3px solid var(--primary);
+            padding-left: 1rem;
+            margin-top: 2rem;
+            font-weight: 600;
+            color: var(--light-text) !important;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 450px;
+            background: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80') no-repeat center center/cover;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* --- EXPERIENCES --- */
+        .experiences {
+            background-color: #181818;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .card-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .card-block h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--muted-text);
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-block ul {
+            list-style: none;
+        }
+
+        .card-block ul li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-block ul li::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            top: -2px;
+        }
+
+        /* --- MENUS --- */
+        .menu-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--light-text);
+            padding: 0.6rem 1.5rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background-color: var(--primary);
+            color: #000;
+            border-color: var(--primary);
+        }
+
+        .menu-pane {
+            display: none;
+        }
+
+        .menu-pane.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item-box {
+            background-color: var(--surface);
+            padding: 1.8rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .menu-item-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .course {
+            margin-bottom: 0.8rem;
+        }
+
+        .course-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--muted-text);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: block;
+        }
+
+        /* --- CUSTOM OPTIONS --- */
+        .custom-menu-section {
+            margin-top: 5rem;
+            background-color: #181818;
+            padding: 3rem;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        .custom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .custom-cat h4 {
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.3rem;
+        }
+
+        .custom-cat ul {
+            list-style: none;
+            font-size: 0.95rem;
+            color: var(--muted-text);
+        }
+
+        .custom-cat ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* --- FAQ AREA --- */
+        .faq-section {
+            background-color: #181818;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            color: var(--muted-text);
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 250px;
+            padding-bottom: 1.2rem;
+        }
+
+        .faq-toggle {
+            transition: transform 0.3s;
+            color: var(--primary);
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* --- GALLERY --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted-text);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background-color: #1c1c1c;
+        }
+
+        /* --- BOOKING FORM --- */
+        .booking {
+            background-color: var(--surface);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            color: var(--muted-text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input, select, textarea {
+            background-color: var(--dark-bg);
+            border: 1px solid var(--border);
+            padding: 0.8rem;
+            color: #fff;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-transform: none;
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            accent-color: var(--primary);
+        }
+
+        /* --- CONTACT & FOOTER --- */
+        .contact-info {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-details {
+            margin: 2rem 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-details span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #0b0b0b;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-top: 1px solid var(--border);
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* --- RESPONSIVE BREAKPOINTS --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.8rem; }
+            .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+            .about-img { height: 300px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .menu-pane.active { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .btn-instagram { margin-left: 0; margin-top: 1rem; display: flex; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">CHEF OTITA</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#menus">Menus</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#book">Book Chef</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CHEF OTITA</h1>
+            <p class="hero-tagline">Private Chef | Intimate Dining Experiences</p>
+            <p class="hero-desc">Bringing restaurant-quality dining to your home, Airbnb, private gathering, or special occasion. Whether you're planning a romantic dinner, birthday celebration, or private event, Chef Otita creates memorable dining experiences with exceptional presentation.</p>
+            <a href="#book" class="btn">Book an Experience</a>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container" style="padding:0;">
+            <div class="why-grid">
+                <div class="why-item"><span>✓</span> Personalized Menus</div>
+                <div class="why-item"><span>✓</span> Fresh Quality Ingredients</div>
+                <div class="why-item"><span>✓</span> Professional Presentation</div>
+                <div class="why-item"><span>✓</span> Kenyan & International</div>
+                <div class="why-item"><span>✓</span> Stress-Free Dining</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="about-layout">
+            <div class="about-text">
+                <h2 style="color:var(--primary); text-transform:uppercase; margin-bottom:0.5rem; letter-spacing:1px;">Meet Your Chef</h2>
+                <h3>Samuel Omondi Otita</h3>
+                <p>Cooking has always been more than preparing meals—it is about creating moments that bring people together. As a private chef, my focus is on providing personalized dining experiences for small gatherings, intimate celebrations, and special occasions.</p>
+                <p>Every menu is thoughtfully designed to match the preferences of my clients while maintaining the highest standards of quality and presentation.</p>
+                <p class="about-motto">YOUR SATISFACTION, MY PASSION.</p>
+            </div>
+            <div class="about-img"></div>
+        </div>
+    </section>
+
+    <section id="experiences" class="experiences">
+        <div class="container">
+            <h2 class="section-title">Featured Experiences</h2>
+            <p class="section-subtitle">Choose the perfect tier of exceptional dining crafted specifically for your gathering.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <h3>The Classic</h3>
+                    <p style="color:var(--muted-text); margin-bottom:1.5rem;">Comforting Kenyan favorites prepared with care and authenticity.</p>
+                    <div class="card-block">
+                        <h4>Ideal for:</h4>
+                        <ul>
+                            <li>Family Gatherings</li>
+                            <li>Casual Celebrations</li>
+                            <li>Small House Events</li>
+                        </ul>
+                    </div>
+                    <div class="card-block">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Starter</li>
+                            <li>Main Course</li>
+                            <li>Dessert</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" style="border-color: var(--primary);">
+                    <h3>The Signature</h3>
+                    <p style="color:var(--muted-text); margin-bottom:1.5rem;">A refined blend of Kenyan and international flavors.</p>
+                    <div class="card-block">
+                        <h4>Ideal for:</h4>
+                        <ul>
+                            <li>Birthdays</li>
+                            <li>Anniversary Celebrations</li>
+                            <li>Private Events</li>
+                        </ul>
+                    </div>
+                    <div class="card-block">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Premium Starter</li>
+                            <li>Main Course</li>
+                            <li>Dessert & Enhanced Presentation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>The Luxury</h3>
+                    <p style="color:var(--muted-text); margin-bottom:1.5rem;">Multi-course private dining designed for unforgettable occasions.</p>
+                    <div class="card-block">
+                        <h4>Ideal for:</h4>
+                        <ul>
+                            <li>Romantic / Proposal Dinners</li>
+                            <li>VIP Gatherings</li>
+                            <li>Special Occasions</li>
+                        </ul>
+                    </div>
+                    <div class="card-block">
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>Multi-Course Dining</li>
+                            <li>Premium Ingredients</li>
+                            <li>Luxury Presentation & Personalized Service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menus" class="container">
+        <h2 class="section-title">Menu Collection</h2>
+        <p class="section-subtitle">Explore expertly balanced pre-set layouts or map out a custom curation.</p>
+
+        <div class="menu-tabs">
+            <button class="tab-btn active" onclick="openMenu(event, 'classic')">Classic Menus (1-10)</button>
+            <button class="tab-btn" onclick="openMenu(event, 'signature')">Signature Menus (1-10)</button>
+            <button class="tab-btn" onclick="openMenu(event, 'luxury')">Luxury Menus (1-10)</button>
+        </div>
+
+        <div id="classic" class="menu-pane active">
+            <div class="menu-item-box">
+                <h3>Classic Menu 1</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Bone Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Pilau Rice, Beef Stew, Sukuma Wiki, Kachumbari</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Seasonal Fruit Platter</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 2</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Vegetable Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Mukimo, Beef Wet Fry, Managu</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Salad</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 3</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Tomato Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Ugali, Beef Wet Fry, Sukuma Wiki, Kachumbari</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Watermelon Slices</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 4</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Bone Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>White Rice, Beef Fry, Spinach, Coleslaw</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Pineapple Slices</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 5</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Vegetable Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Chapati, Chicken Curry, Mixed Vegetables</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Salad</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 6</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Chicken Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Pilau Rice, Beef Stew, Sukuma Wiki</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fresh Fruits</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 7</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Tomato Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>White Rice, Fried Chicken, Cabbage</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Platter</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 8</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Bone Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Mukimo, Beef Stew, Managu</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Watermelon</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 9</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Vegetable Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Ugali, Goat Stew, Sukuma Wiki</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Seasonal Fruits</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Classic Menu 10</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Chicken Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>White Rice, Beef Fry, Spinach</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Salad</p></div>
+            </div>
+        </div>
+
+        <div id="signature" class="menu-pane">
+            <div class="menu-item-box">
+                <h3>Signature Menu 1</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Bone Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Pilau Rice, Chapati, Beef Stew, Sukuma Wiki, Kachumbari</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Salad</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 2</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Cream of Mushroom Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Coconut Rice, Chicken Curry, French Beans, Coleslaw</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Platter</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 3</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Vegetable Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Pilau Rice, Beef Stir Fry, Stir-Fried Vegetables</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Vanilla Cake</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 4</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Chicken Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>White Rice, Grilled Chicken, Buttered Vegetables</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Salad</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 5</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Bone Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Mukimo, Beef Wet Fry, Managu, Kachumbari</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Platter</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 6</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Cream of Mushroom Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Coconut Rice, Fish Curry, French Beans</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Chocolate Cake</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 7</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Vegetable Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Pilau Rice, Chicken Curry, Spinach, Coleslaw</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Salad</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 8</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Chicken Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Chapati, Beef Stew, Stir-Fried Mixed Vegetables</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Vanilla Cake</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 9</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Bone Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>White Rice, Goat Fry, Sukuma Wiki</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Platter</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Signature Menu 10</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Cream of Mushroom Soup</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Pilau Rice, Fried Chicken, French Beans, Kachumbari</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Fruit Salad</p></div>
+            </div>
+        </div>
+
+        <div id="luxury" class="menu-pane">
+            <div class="menu-item-box">
+                <h3>Luxury Menu 1</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Cream of Mushroom Soup, Mini Samosas</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Beef Tenderloin Steaks, Creamy Mashed Potatoes, Grilled Asparagus, Red Wine Reduction</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Chocolate Fondant with Vanilla Ice Cream</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 2</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Butternut Squash Soup, Herb Crostini</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Pan-Seared Salmon, Wild Mushroom Risotto, Sautéed Spinach, Lemon Butter Sauce</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Classic Crème Brûlée</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 3</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Prawn Cocktail, Avocado Mousse</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Herb-Crusted Rack of Lamb, Roasted Hasselback Potatoes, Honey-Glazed Carrots</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Warm Apple Tarte Tatin</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 4</h3>
+                <div class="course"><span class="course-title">Starter</span><p>French Onion Soup, Gruyère Toast</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Grilled Ribeye Steak, Truffle Fries, Charred Broccolini, Peppercorn Sauce</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Tiramisu Elegante</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 5</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Swahili Crab Cakes, Mango Chili Salsa</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Braised Beef Short Ribs, Creamy Polenta, Butter-Poached Roasted Root Vegetables</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Decadent Dark Chocolate Mousse</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 6</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Roasted Tomato & Basil Soup, Goat Cheese Crostini</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Stuffed Chicken Ballotine, Sweet Potato Purée, French Beans, Thyme Jus</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>New York Style Cheesecake with Berry Compote</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 7</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Seared Scallops, Pea Purée, Crispy Pancetta</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Slow-Roasted Duck Breast, Potato Gratin, Braised Red Cabbage, Orange Reduction</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Molten Lava Cake with Raspberry Coulis</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 8</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Creamy Pumpkin Soup, Toasted Pepitas</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Grilled Red Snapper, Coconut Lime Infused Rice, Stir-Fried Asparagus & Baby Corn</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Panna Cotta with Passion Fruit Glaze</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 9</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Crispy Pork Belly Bites, Sticky Hot Honey Glaze</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Beef Wellington, Garlic Herb Roasted Potatoes, Sautéed Medley of Greens</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Lemon Meringue Tartlet</p></div>
+            </div>
+            <div class="menu-item-box">
+                <h3>Luxury Menu 10</h3>
+                <div class="course"><span class="course-title">Starter</span><p>Lobster Bisque, Puff Pastry Twist</p></div>
+                <div class="course"><span class="course-title">Main Course</span><p>Tomahawk Steak (Shared), Loaded Roasted Potatoes, Grilled Mediterranean Vegetables</p></div>
+                <div class="course"><span class="course-title">Dessert</span><p>Artisanal Cheese & Chocolate Dessert Platter</p></div>
+            </div>
+        </div>
+
+        <!-- --- CUSTOM OPTIONS CURATION MATRIX --- -->
+        <div class="custom-menu-section">
+            <h3 style="color:var(--primary); text-transform:uppercase; margin-bottom:0.5rem; text-align:center;">Mix & Match Curation Matrix</h3>
+            <p style="color:var(--muted-text); text-align:center; margin-bottom:2rem;">Select items across categories below to map out your own bespoke dining experience.</p>
+            <div class="custom-grid">
+                <div class="custom-cat">
+                    <h4>Starters</h4>
+                    <ul>
+                        <li>• Bone Soup</li>
+                        <li>• Vegetable Soup</li>
+                        <li>• Tomato Soup</li>
+                        <li>• Chicken Soup</li>
+                        <li>• Cream of Mushroom</li>
+                        <li>• Butternut Squash Soup</li>
+                    </ul>
+                </div>
+                <div class="custom-cat">
+                    <h4>Carbs</h4>
+                    <ul>
+                        <li>• Pilau Rice</li>
+                        <li>• Mukimo</li>
+                        <li>• Ugali</li>
+                        <li>• White Rice</li>
+                        <li>• Chapati</li>
+                        <li>• Coconut Rice</li>
+                        <li>• Mashed Potatoes</li>
+                    </ul>
+                </div>
+                <div class="custom-cat">
+                    <h4>Proteins</h4>
+                    <ul>
+                        <li>• Beef Stew / Fry</li>
+                        <li>• Chicken Curry / Fried</li>
+                        <li>• Goat Stew / Fry</li>
+                        <li>• Beef Stir Fry</li>
+                        <li>• Grilled Chicken</li>
+                        <li>• Fish Curry</li>
+                        <li>• Premium Beef Cuts</li>
+                    </ul>
+                </div>
+                <div class="custom-cat">
+                    <h4>Vegetables</h4>
+                    <ul>
+                        <li>• Sukuma Wiki</li>
+                        <li>• Managu</li>
+                        <li>• Spinach</li>
+                        <li>• Kachumbari</li>
+                        <li>• Coleslaw</li>
+                        <li>• French Beans</li>
+                        <li>• Buttered Vegetables</li>
+                    </ul>
+                </div>
+                <div class="custom-cat">
+                    <h4>Desserts</h4>
+                    <ul>
+                        <li>• Fruit Platter / Salad</li>
+                        <li>• Watermelon Slices</li>
+                        <li>• Pineapple Slices</li>
+                        <li>• Vanilla Cake</li>
+                        <li>• Chocolate Cake</li>
+                        <li>• Fine Pastries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FAQ AREA --- -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about booking your private chef experience.</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How does the private chef service work?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once you select a menu or request a custom curation, Chef Otita handles menu development and baseline preparation. On the event day, the chef finishes preparation and plates the courses live at your venue, giving you a restaurant-quality experience at home.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Do you provide the ingredients?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all required fresh and quality ingredients needed for your selected menu are sourced carefully and included within the standardized operational packages.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Can you accommodate dietary restrictions or allergies?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Please specify any allergies, vegan/vegetarian preferences, or health-related dietary restrictions in the booking form so we can adjust the ingredients safely.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Do you travel outside of Nairobi?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Primary services cover Nairobi and immediate surrounding areas (such as Kitengela). Travel arrangements for locations further out can be discussed and customized upon request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- GALLERY PLACEHOLDER --- -->
+    <section id="gallery" class="container">
+        <h2 class="section-title">Culinary Gallery</h2>
+        <p class="section-subtitle">A glimpse into past showcases, fine presentation, and curated events.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">Gourmet Starters</div>
+            <div class="gallery-item">Signature Mains</div>
+            <div class="gallery-item">Plating Design</div>
+            <div class="gallery-item">Intimate Events</div>
+            <div class="gallery-item">Bespoke Desserts</div>
+            <div class="gallery-item">Local Delicacies</div>
+        </div>
+    </section>
+
+    <!-- --- BOOKING & INQUIRY FORM --- -->
+    <section id="book" class="booking">
+        <div class="container">
+            <h2 class="section-title">Book Chef Otita / Send Inquiry</h2>
+            <p class="section-subtitle">Secure your date or drop an initial inquiry. All detail updates route directly through Web3Forms.</p>
+            <div class="form-container">
+                
+                <!-- Web3Forms Configured Form Container -->
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    
+                    <!-- Web3Forms Access Key Integration -->
+                    <input type="hidden" name="access_key" value="8070627c-7395-4692-a6de-d198a689a3be">
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. +254 700 000000">
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Event Date (Optional)</label>
+                            <input type="date" id="date" name="event_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" name="guest_count" min="1" placeholder="e.g. 4">
+                        </div>
+                        <div class="form-group">
+                            <label for="tier">Experience Tier</label>
+                            <select id="tier" name="selected_tier">
+                                <option value="" disabled selected>Select Tier / Inquiry Type</option>
+                                <option value="classic">The Classic Experience</option>
+                                <option value="signature">The Signature Experience</option>
+                                <option value="luxury">The Luxury Experience</option>
+                                <option value="custom">Bespoke Custom Curation</option>
+                                <option value="general_inquiry">General Culinary Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Dietary Restrictions / Preferences</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label"><input type="checkbox" name="diet_none" value="none"> None</label>
+                                <label class="checkbox-label"><input type="checkbox" name="diet_veg" value="vegetarian"> Vegetarian</label>
+                                <label class="checkbox-label"><input type="checkbox" name="diet_vegan" value="vegan"> Vegan</label>
+                                <label class="checkbox-label"><input type="checkbox" name="diet_allergy" value="allergies"> Allergies</label>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Special Requirements, Preferred Menus & Message Details</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Mention preferred menus, custom setups, layout details, or initial questions here..."></textarea>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn">Submit Booking Request</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- --- CONTACT INFO --- -->
+    <section class="container">
+        <div class="contact-info">
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">Direct Inquiries</h2>
+            <p style="color:var(--muted-text)">Have an urgent request or want to discuss a tailored gathering layout immediately?</p>
+            <div class="contact-details">
+                <p><span>Location:</span> Serving Nairobi, Kenya & Surrounding Districts</p>
+                <p><span>Email:</span> contact@chefotita.com</p>
+                <p><span>Phone:</span> +254 700 000 000</p>
+                <p><span>Instagram:</span> @chef_otita</p>
+            </div>
+            
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/254700000000" class="btn btn-whatsapp" target="_blank">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="display:inline-block; vertical-align:middle;">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.714-1.458L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.528 0 10.025-4.495 10.028-10.025.002-2.678-1.03-5.195-2.904-7.072C17.316 1.732 14.804.698 12.14.697c-5.531 0-10.029 4.5-10.032 10.03-.001 1.924.501 3.805 1.458 5.41l-.984 3.591 3.684-.966z"/>
+                </svg>
+                Chat on WhatsApp
+            </a>
+
+            <!-- Instagram Button -->
+            <a href="https://instagram.com/chef_otita" class="btn btn-instagram" target="_blank">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="display:inline-block; vertical-align:middle;">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                </svg>
+                Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer>
+        <p>&copy; 2026 Chef Otita. All Rights Reserved.</p>
+        <p style="font-size:0.8rem; color:#555;">Professional Private Chef & Catering Management Services — Nairobi, Kenya.</p>
+    </footer>
+
+    <!-- --- INTERACTIVE JAVASCRIPT --- -->
+    <script>
+        // Tab switching functionality for Menu Sections
+        function openMenu(evt, menuName) {
+            const menuPanes = document.getElementsByClassName("menu-pane");
+            for (let i = 0; i < menuPanes.length; i++) {
+                menuPanes[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(menuName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Accordion toggle functionality for FAQ Section
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle("open");
+            
+            const toggleSign = element.querySelector(".faq-toggle");
+            if (faqItem.classList.contains("open")) {
+                toggleSign.textContent = "×";
+            } else {
+                toggleSign.textContent = "+";
+            }
+        }
+    </script>
+</body>
+</html>
